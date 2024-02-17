@@ -11,8 +11,13 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react'
 import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from 'react-icons/io5'
-import { ReactElement } from 'react'
+import { FaChalkboardTeacher } from "react-icons/fa";
+import { MdOutlinePersonAddAlt1 } from "react-icons/md";
+import { GrGroup } from "react-icons/gr";
 
+
+
+import mentorback from "../assests/ill1.jpeg"
 const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={'row'} align={'center'}>
@@ -29,52 +34,39 @@ export default function SplitWithImage() {
     <Container maxW={'5xl'} py={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
-          <Text
-            textTransform={'uppercase'}
-            color={'blue.400'}
-            fontWeight={600}
-            fontSize={'sm'}
-            bg={useColorModeValue('blue.50', 'blue.900')}
-            p={2}
-            alignSelf={'flex-start'}
-            rounded={'md'}>
-            Our Story
-          </Text>
-          <Heading>A digital Product design agency</Heading>
+       
+          <Heading>Empowering Futures, One Mentorship at a Time</Heading>
           <Text color={'gray.500'} fontSize={'lg'}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-            eirmod tempor invidunt ut labore
-          </Text>
+          A dynamic platform where students can seamlessly connect with mentors who share their interests and career aspirations. With a diverse pool of mentors, integrated messaging features, and progress tracking tools, our website facilitates meaningful relationships and fosters growth for both students and mentors alike.          </Text>
           <Stack
             spacing={4}
             divider={
               <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
             }>
             <Feature
-              icon={<Icon as={IoAnalyticsSharp} color={'yellow.500'} w={5} h={5} />}
+              icon={<Icon as={FaChalkboardTeacher} color={'yellow.500'} w={5} h={5} />}
               iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-              text={'Business Planning'}
+              text={'Personalized mentorship experiences'}
             />
             <Feature
-              icon={<Icon as={IoLogoBitcoin} color={'green.500'} w={5} h={5} />}
+              icon={<Icon as={MdOutlinePersonAddAlt1} color={'green.500'} w={5} h={5} />}
               iconBg={useColorModeValue('green.100', 'green.900')}
-              text={'Financial Planning'}
+              text={'Receive tailored guidance'}
             />
             <Feature
-              icon={<Icon as={IoSearchSharp} color={'purple.500'} w={5} h={5} />}
+              icon={<Icon as={GrGroup} color={'purple.500'} w={5} h={5} />}
               iconBg={useColorModeValue('purple.100', 'purple.900')}
-              text={'Market Analysis'}
+              text={'Communication made easy'}
             />
           </Stack>
         </Stack>
-        <Flex>
+        <Flex align={'center'}>
           <Image
             rounded={'md'}
             alt={'feature image'}
-            src={
-              'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-            }
+            src={mentorback}
             objectFit={'cover'}
+            height={'min-content'}
           />
         </Flex>
       </SimpleGrid>

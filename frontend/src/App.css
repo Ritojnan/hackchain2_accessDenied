@@ -33,7 +33,7 @@ body {
   padding: 1vh 2vh;
   font-size: small;
   border-radius: 50px;
-  background: #b6d6fc;
+  background: #000000;
   color: #0b75f6;
   width: fit-content;
 }
@@ -57,7 +57,7 @@ body {
   color: aliceblue;
 }
 .btn1:hover {
-  background-color: #b6d6fc;
+  background-color: #000000;
   font-family: "poppins";
   color: #0b75f6;
   border: 2px solid #0b75f6;
@@ -71,7 +71,7 @@ body {
 .btn2 {
   padding: 16px;
   white-space: nowrap;
-  background-color: #b6d6fc;
+  background-color: #000000;
   font-family: "poppins";
   color: #0b75f6;
   border: 2px solid #0b75f6;
@@ -101,7 +101,7 @@ body {
   margin-top: 16px;
   width: 80%;
   height: 5rem;
-  background-color: #b6d6fc;
+  background-color: #000000;
   border-radius: 16px;
   border-bottom: solid 5px #0d0c6a;
   justify-content: space-evenly;
@@ -130,18 +130,18 @@ body {
   flex-direction: column;
 
   align-items: center;
-  background-color: #222b34;
+  background-color: #ffb020;
 }
 .section-title {
   padding-top: 84px;
-  color: #b6d6fc;
+  color: #000000;
   font-family: "poppins";
   font-size: 2.2rem;
   text-align: center;
   z-index: 99;
 }
 .subheading {
-  color: #82888d;
+  color: #000000;
   font-family: "poppins";
 }
 
@@ -150,7 +150,7 @@ body {
     rgb(225, 199, 252) 0px 50px 100px -20px,
     rgb(225, 199, 252) 0px 30px 60px -30px;
   padding: 0.8rem 2rem;
-  background-color: #b6d6fc;
+  background-color: #000000;
   margin-bottom: 64px;
   font-family: "poppins";
   color: #0d0c6a;
@@ -179,7 +179,7 @@ body {
   width: 60%;
 }
 .boxes-line {
-  border: solid 2px #b6d6fc;
+  border: solid 2px #000000;
   height: 52vh;
   width: 25%;
   display: flex;

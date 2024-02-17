@@ -68,7 +68,7 @@ const ChatCard = () => {
             alignItems: "center",
             minWidth: "2.5rem",
             minHeight: "2.5rem",
-            backgroundColor: "blue",
+            backgroundColor: "green",
             opacity: "0.65",
             borderRadius: "0.5rem",
           }}

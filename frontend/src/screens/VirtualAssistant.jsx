@@ -526,7 +526,7 @@ const VirtualAssistant = () => {
                         <div
                           onClick={() => acceptApplicant(candidate.uid)}
                           style={{
-                            color: "blue",
+                            color: "green",
                             textDecoration: "underline",
                           }}
                         >
@@ -629,7 +629,7 @@ const VirtualAssistant = () => {
                           </div>
                         </div>
                         <div
-                          style={{ color: "blue", textDecoration: "underline" }}
+                          style={{ color: "green", textDecoration: "underline" }}
                         >
                           <a href="https://ritojnan.github.io/streamworks/">Meet</a>
                         </div>

@@ -5,23 +5,24 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
-import MouseContextProvider from "./context/mouse-context";
 
 import { extendTheme } from '@chakra-ui/react'
+import '@fontsource/poppins';
+
 
 const colors = {
   "black": "#0c1015",
   "gray": {
-    "50": "#f9fafa",
-    "100": "#f1f1f2",
-    "200": "#e6e7e9",
-    "300": "#d2d4d7",
-    "400": "#a9adb2",
-    "500": "#797f88",
-    "600": "#4d5560",
-    "700": "#2e3744",
-    "800": "#19202b",
-    "900": "#141a23"
+    "50": "#f7f7f7",
+    "100": "#e0e0e0",
+    "200": "#c5c5c5",
+    "300": "#a6a6a6",
+    "400": "#949494",
+    "500": "#7d7d7d",
+    "600": "#696969",
+    "700": "#545454",
+    "800": "#474747",
+    "900": "#333333"
   },
   "teal": {
     "50": "#edfdfd",
@@ -96,45 +97,48 @@ const colors = {
     "900": "#612f00"
   },
   "yellow": {
-    "50": "#fffefc",
-    "100": "#fcf9ea",
-    "200": "#f7edc1",
-    "300": "#f1df8f",
-    "400": "#e8ca45",
-    "500": "#c9a400",
-    "600": "#a18300",
-    "700": "#7d6600",
-    "800": "#5e4d00",
-    "900": "#4e3f00"
+    "50": "#fff6e7",
+    "100": "#ffdc9b",
+    "200": "#ffb939",
+    "300": "#dd981c",
+    "400": "#c58819",
+    "500": "#a67315",
+    "600": "#8c6112",
+    "700": "#714e0e",
+    "800": "#5f420c",
+    "900": "#452f09"
   },
   "green": {
-    "50": "#f5fad9",
-    "100": "#d6eb5d",
-    "200": "#b3d300",
-    "300": "#96b100",
-    "400": "#ff000",
-    "500": "#718600",
-    "600": "#607100",
-    "700": "#4d5a00",
-    "800": "#414c00",
-    "900": "#2f3700"
+    "50": "#f3fae9",
+    "100": "#cdeaa4",
+    "200": "#9ed64f",
+    "300": "#71b80b",
+    "400": "#65a50a",
+    "500": "#558b08",
+    "600": "#487507",
+    "700": "#3a5e06",
+    "800": "#315005",
+    "900": "#233903"
   }
 }
 
 const theme = extendTheme({
-  colors
+  colors,
+  fonts: {
+    heading: `'Poppins', sans-serif`,
+    body: `'Poppins', sans-serif`,
+  },
+
 })
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-   <MouseContextProvider>
     <BrowserRouter>
       <ChakraProvider theme={theme}>
         <App />
       </ChakraProvider>
     </BrowserRouter>
-    </MouseContextProvider> 
   </React.StrictMode>
 );
 

@@ -27,96 +27,96 @@ import ChatCard from "./ChatCard";
 const Community = () => {
   const [Groups, setGroups] = useState([
     {
-      name: "Mobility Challenges",
-      description: "Empowering individuals with mobility challenges.",
+      name: "Business Leaders Club",
+      description: "Empowering future Entrepreneurs to thrive in the world of business.",
       posts: 150,
       messages: 850,
-      forums: ["#JobOpportunities", "#CareerAdvice"],
+      forums: ["#BusinessNetworking", "#CareerAdvice"],
     },
     {
-      name: "Visual Impairment Network",
-      description: "Connecting the visually impaired community.",
+      name: "Financial Analysts Association",
+      description: "Fostering expertise and insight for navigating the complex terrain of financial markets and analysis.",
       posts: 120,
       messages: 720,
-      forums: ["#TechJobs", "#AccessibleTech"],
+      forums: ["#AccountingAnalytics", "#FinanceCareers"],
     },
     {
-      name: "Hearing Impairments and Hard of Hearing Hub",
+      name: "Legal Studies Society",
       description:
-        "Supporting the hearing impairments and hard of hearing community.",
+      "Providing a supportive platform and resources for study and practice of law.",
       posts: 90,
       messages: 600,
-      forums: ["#InclusiveWorkplaces", "#CommunicationTips"],
+      forums: ["#LegalInsights", "#LawStudents"],
     },
     {
-      name: "Neurodiversity Allies",
-      description: "Advocating for neurodiversity in the workplace.",
+      name: "Code Creators Alliance",
+      description: "Connecting coders, guiding them through challenges and promoting digital innovation.",
       posts: 80,
       messages: 550,
-      forums: ["#NeurodiverseTalent", "#InclusiveHiring"],
+      forums: ["#TechTips", "#CodeConnections"],
     },
     {
-      name: "Cognitive Accessibility Forum",
-      description: "Fostering cognitive accessibility awareness.",
+      name: "Digital Designers ",
+      description: "Empowering digital artists to create, innovate, and thrive in the ever-evolving landscape of design.",
       posts: 100,
       messages: 680,
-      forums: ["#AccessibleDesign", "#InclusiveTechnology"],
+      forums: ["#AccessibleDesign", "#CreativeIdeas"],
     },
     {
-      name: "Disability Entrepreneurs Network",
-      description: "Empowering disabled entrepreneurs and professionals.",
+      name: "Historical Studies Club",
+      description: "Fostering a community of curiosity and exploration in historical research.",
       posts: 110,
       messages: 720,
-      forums: ["#BusinessOpportunities", "#EntrepreneurialTips"],
+      forums: ["#HistoricalResearch", "#ArchaeologyExplorations"],
     },
     {
-      name: "Invisible Disabilities Community",
-      description: "Connecting individuals with invisible disabilities.",
+      name: "Medical Minds Society",
+      description: "Connecting aspiring medical professionals fostering support and knowledge-sharing.",
       posts: 70,
       messages: 500,
-      forums: ["#SupportNetwork", "#InvisibleDisabilityAwareness"],
+      forums: ["#MedStudentSupport", "#MedStudentNetwork"],
     },
     {
-      name: "Accessible Travel Enthusiasts",
-      description: "Exploring accessible travel options for everyone.",
+      name: "Architectural Planning Association",
+      description: "Exploring the blueprints of tomorrow,promoting architectural design and urban planning.",
       posts: 95,
       messages: 600,
-      forums: ["#AccessibleDestinations", "#TravelTips"],
+      forums: ["#AccessibleDesigns", "#ArchitectureDrawing"],
     },
     {
-      name: "Community Advocates for Access",
-      description: "Advocating for accessibility in public spaces.",
+      name: "Journalist Network",
+      description: "Fostering collaboration and ethical journalism in an ever-evolving media landscape.",
       posts: 120,
       messages: 800,
-      forums: ["#AccessibleCities", "#PublicSpacesInclusion"],
+      forums: ["#JournalismTips", "#PressUpdates"],
     },
   ]);
 
   const [meetings, setMeetings] = useState([
     {
-      meetingName: "Team Collaboration",
+      meetingName: "Group Study Session",
       userName: "John Doe",
-      hashtag: "#Collab123",
+      hashtag: "#CollabTeam123",
       camera: "Online",
       time: "18 January 2024 at 10:00 AM",
     },
     {
-      meetingName: "Project Review",
+      meetingName: "Assignment Review",
       userName: "Jane Smith",
       hashtag: "#Project456",
       camera: "Online",
       time: "18 January 2024 at 11:30 AM",
     },
     {
-      meetingName: "Client Presentation",
-      userName: "Client A",
-      hashtag: "#Client789",
+      meetingName: "Presentation Preparation Session",
+      userName: "Business Student A",
+      hashtag: "#Student789",
       camera: "Online",
       time: "18 January 2024 at 02:00 PM",
     },
     {
-      meetingName: "Design Discussion",
-      userName: "Designer X",
+      meetingName: "Design Brainstorming",
+      userName: "Design Student X",
       hashtag: "#Design789",
       camera: "Online",
       time: "18 January 2024 at 03:45 PM",
@@ -194,7 +194,7 @@ const Community = () => {
               <div style={{ fontSize: "1.5rem", fontWeight: 625 }}>
                 Categories
               </div>
-              <Select
+              {/* <Select
                 placeholder="Sort By"
                 variant="flushed"
                 // style={{ width: "fit-content" }}
@@ -208,7 +208,7 @@ const Community = () => {
                 <option value="option3" style={{ padding: "0.5rem" }}>
                   Others
                 </option>
-              </Select>
+              </Select> */}
             </div>
             <div>
               {Groups.map((group) => {
@@ -262,58 +262,59 @@ const Community = () => {
                           {group.forums?.map((forum, forumIndex) => {
                             let backgroundColor;
                             switch (forum) {
-                              case "#JobOpportunities":
+                              case "#BusinessNetworking":
                                 backgroundColor = "#FFEC8B"; // Light Goldenrod Yellow
                                 break;
                               case "#CareerAdvice":
                                 backgroundColor = "#98FB98"; // Pale Green
                                 break;
-                              case "#TechJobs":
-                                backgroundColor = "#B0E0E6"; // Powder Blue
-                                break;
-                              case "#AccessibleTech":
-                                backgroundColor = "#87CEFA"; // Light Sky Blue
-                                break;
-                              case "#InclusiveWorkplaces":
-                                backgroundColor = "#F0FFF0"; // Honeydew
-                                break;
-                              case "#CommunicationTips":
-                                backgroundColor = "#FFB6C1"; // Light Pink
-                                break;
-                              case "#NeurodiverseTalent":
-                                backgroundColor = "#DDA0DD"; // Plum
-                                break;
-                              case "#InclusiveHiring":
-                                backgroundColor = "#FFDAB9"; // Peachpuff
-                                break;
-                              case "#AccessibleDesign":
-                                backgroundColor = "#FFA07A"; // Light Salmon
-                                break;
-                              case "#InclusiveTechnology":
-                                backgroundColor = "#FFD700"; // Gold
-                                break;
-                              case "#BusinessOpportunities":
-                                backgroundColor = "#AFEEEE"; // Pale Turquoise
-                                break;
-                              case "#EntrepreneurialTips":
-                                backgroundColor = "#98FB98"; // Pale Green
-                                break;
-                              case "#SupportNetwork":
+                              case "#LawStudents":
                                 backgroundColor = "#FFC0CB"; // Pink
                                 break;
-                              case "#InvisibleDisabilityAwareness":
-                                backgroundColor = "#ADD8E6"; // Light Blue
+                              case "#FinanceCareers":
+                                backgroundColor = "#87CEFA"; // Light Sky Blue
                                 break;
-                              case "#AccessibleDestinations":
-                                backgroundColor = "#FFD700"; // Gold
-                                break;
-                              case "#TravelTips":
-                                backgroundColor = "#FF7F50"; // Coral
-                                break;
-                              case "#AccessibleCities":
+                              case "#TechTips":
                                 backgroundColor = "#FFDAB9"; // Peachpuff
                                 break;
-                              case "#PublicSpacesInclusion":
+                              case "#CodeConnections":
+                                backgroundColor = "#FFD700"; // Light Pink
+                                break;
+                              case "#AccountingAnalytics":
+                                backgroundColor = "#DDA0DD"; // Plum
+                                break;
+                              case "#AccessibleDesign":
+                                backgroundColor = "#ADD8E6"; // Light Blue
+                                break;
+                                case "#LegalInsights":
+                                  backgroundColor = "#FFA07A"; // Light Salmon
+                                  break;
+                            
+                              case "#CreativeIdeas":
+                                backgroundColor = "#DDA0DD"; // plum
+                                break;
+                              case "#ArchaeologyExplorations":
+                                backgroundColor = "#AFEEEE"; // Pale Turquoise
+                                break;
+                              case "#PressUpdates":
+                                backgroundColor = "#98FB98"; // Pale Green
+                                break;
+                              case "#MedStudentSupport":
+                                backgroundColor = "#FFC0CB"; // Pink
+                                break;
+                              case "#MedStudentNetwork":
+                                backgroundColor = "#ADD8E6"; // Light Blue
+                                break;
+                              case "#AccessibleDesigns":
+                                backgroundColor = "#FFD700"; // Gold
+                                break;
+                              case "#ArchitectureDrawing":
+                                backgroundColor = "#FF7F50"; // Coral
+                                break;
+                              case "#HistoricalResearch":
+                                backgroundColor = "#FFDAB9"; // Peachpuff
+                                break;
+                              case "#JournalismTips":
                                 backgroundColor = "#FFE4C4"; // Bisque
                                 break;
                               // Add more cases for other forums if needed
