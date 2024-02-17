@@ -3,6 +3,7 @@ import { auth } from "../Firebase";
 import axios from "axios";
 import { FaRegCalendarCheck, FaRegStar, FaTable } from "react-icons/fa";
 import { getFirestore, doc, getDocs, collection } from "firebase/firestore";
+import video from "../assests/video.mp4"
 import {
   Card,
   CardHeader,
@@ -242,7 +243,7 @@ const Dashboard = () => {
 
   const handleOCRRequest = async () => {
     const apiUrl = "https://api.edenai.run/v2/ocr/identity_parser";
-    const apiKey =process.env.REACT_APP_EDENV_API_KEY // Replace with your actual API key
+    const apiKey ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTZhZjY3NzUtNDM0ZC00YzhiLWE5OTMtMzg0YjdhODgyOGYxIiwidHlwZSI6ImFwaV90b2tlbiJ9.-5jwvonLSSasi9EnAzxU-pezBuKFXqBX5Ikbz6Ybo3Q"// Replace with your actual API key
 
     const form = new FormData();
     form.append("providers", "affinda");
@@ -325,7 +326,7 @@ const Dashboard = () => {
     position: "absolute",
     display: "flex",
     width: "97vw",
-    height: "100vh",
+    height: "95vh",
     justifyContent: "center",
     alignItems: "center",
     zIndex: "999",
@@ -335,7 +336,7 @@ const Dashboard = () => {
       borderRadius: "16px",
       margin: "auto",
       width: "80vw",
-      height: "100%",
+      height: "90%",
       backgroundColor: "white",
       textAlign: "right",
       position: "relative",
@@ -348,13 +349,13 @@ const Dashboard = () => {
       <span onClick={takeSession} style={{
         position: "absolute",
         top: "10px",
-        right: "10px",
+        right: "20px",
         color: "red",
         fontWeight: "bold",
         fontSize: "2vw",
         cursor: "pointer"
       }}> X </span>
-      <video autoPlay muted loop style={{ width: "80%", maxHeight: "80%" }} />
+      <video autoPlay loop style={{ width: "80%", maxHeight: "80%" , borderRadius: "10px"}} src={video}/>
     </div>
   </div>
   : null}
@@ -555,7 +556,7 @@ const Dashboard = () => {
                 }}
               >
                 <div>
-                  Gender:{" "}
+                  Interests:{" "}
                   <a style={{ color: "black", fontWeight: 600 }}>
                     {user ? user.gender : "-"}
                   </a>
@@ -581,7 +582,7 @@ const Dashboard = () => {
                 color: "gray",
               }}
             >
-              <div>Health Information</div>
+              <div>Personal Information</div>
               <div
                 style={{
                   display: "flex",
@@ -591,7 +592,7 @@ const Dashboard = () => {
                 }}
               >
                 <div>
-                  Blood group:{" "}
+                  Skills: {" "}
                   <a style={{ color: "black", fontWeight: 600 }}>
                     {user ? user.BloodGrp : "-"}
                   </a>
@@ -643,7 +644,7 @@ const Dashboard = () => {
                 color: "gray",
               }}
             >
-              <div>Disability info</div>
+              <div>Disability info (If Any)</div>
               <div
                 style={{
                   display: "flex",
@@ -692,7 +693,7 @@ const Dashboard = () => {
                 color: "gray",
               }}
             >
-              <div>Job</div>
+              <div>Description</div>
               <div
                 style={{
                   display: "flex",
@@ -702,15 +703,15 @@ const Dashboard = () => {
                 }}
               >
                 <div>
-                  Role:{" "}
+                  Career Goal:{" "}
                   <a style={{ color: "black", fontWeight: 600 }}>
                     {user ? user.Role : "-"}
                   </a>
                 </div>
                 <div>
-                  Work experience:{" "}
+                  Preference:{" "}
                   <a style={{ color: "black", fontWeight: 600 }}>
-                    {user ? user.WorkExperience + " years" : "-"}
+                    {user ? user.WorkExperience + " " : "-"}
                   </a>
                 </div>
                 <div>
@@ -978,7 +979,7 @@ const Dashboard = () => {
                         gap: "0.5rem",
                       }}
                     >
-                      <div>₹{job.Salary}</div>
+                      <div>{job.Salary}</div>
                       <div
                         style={{
                           display: "flex",
@@ -1044,31 +1045,31 @@ const Dashboard = () => {
           <ModalHeader>Edit profile</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <FormLabel>Gender</FormLabel>
+            <FormLabel>Interests</FormLabel>
             <Input
               onChange={(e) => setGender(e.target.value)}
               type="tel"
-              placeholder="Enter gender"
+              placeholder="What are your interests"
             />
-            <FormLabel style={{ paddingTop: "0.4rem" }}>Blood group</FormLabel>
+            <FormLabel style={{ paddingTop: "0.4rem" }}>Skills</FormLabel>
             <Input
               onChange={(e) => setBloodGrp(e.target.value)}
               type="tel"
-              placeholder="Enter blood group"
+              placeholder="Enter your skills"
             />
-            <FormLabel style={{ paddingTop: "0.4rem" }}>Role</FormLabel>
+            <FormLabel style={{ paddingTop: "0.4rem" }}>Career Goal</FormLabel>
             <Input
               onChange={(e) => setRole(e.target.value)}
               type="tel"
-              placeholder="Enter role"
+              placeholder="What is your career objective"
             />
             <FormLabel style={{ paddingTop: "0.4rem" }}>
-              Work experience
+              Mentor Preference
             </FormLabel>
             <Input
               onChange={(e) => setWorkExperience(e.target.value)}
               type="tel"
-              placeholder="Enter work experience in years"
+              placeholder="What type of mentor would you prefer?"
             />
           </ModalBody>
           <ModalFooter>

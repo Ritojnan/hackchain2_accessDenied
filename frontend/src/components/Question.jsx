@@ -34,7 +34,7 @@ function Question() {
           headers: {
             "Content-Type": "application/json",
             authorization:
-              `Bearer ${process.env.REACT_APP_EDENS_API_KEY}`,
+              `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTZhZjY3NzUtNDM0ZC00YzhiLWE5OTMtMzg0YjdhODgyOGYxIiwidHlwZSI6ImFwaV90b2tlbiJ9.-5jwvonLSSasi9EnAzxU-pezBuKFXqBX5Ikbz6Ybo3Q`,
           },
           body: JSON.stringify({
             providers: "google",

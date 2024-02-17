@@ -355,6 +355,17 @@ const VirtualAssistant = () => {
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
+                    gap: "0.9rem",
+                    fontWeight: "520",
+                  }}
+                >
+                  <div>Speciality: {meeting.Disability} </div>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
                     gap: "0.5rem",
                     fontWeight: "520",
                   }}
@@ -392,7 +403,7 @@ const VirtualAssistant = () => {
                     fontWeight: "520",
                   }}
                 >
-                  <div>Salary: {meeting.Salary} Per Annum</div>
+                  <div>Company: {meeting.Salary} </div>
                 </div>
               </div>
             </Card>
@@ -458,7 +469,7 @@ const VirtualAssistant = () => {
                   justifyContent: "space-between",
                 }}
               >
-                <div>Applicants</div>
+                <div>Applied For Mentorship</div>
                 <div
                   style={{
                     marginLeft: "auto",
@@ -565,7 +576,7 @@ const VirtualAssistant = () => {
                   justifyContent: "space-between",
                 }}
               >
-                <div>Interviewees</div>
+                <div>Mentees Queued</div>
                 <div
                   style={{
                     marginLeft: "auto",
@@ -666,7 +677,7 @@ const VirtualAssistant = () => {
                   justifyContent: "space-between",
                 }}
               >
-                <div>Offered</div>
+                <div>Sessions</div>
                 <div
                   style={{
                     marginLeft: "auto",
@@ -751,21 +762,21 @@ const VirtualAssistant = () => {
           <ModalHeader>Edit profile</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <FormLabel style={{ paddingTop: "0.4rem" }}>Company Name</FormLabel>
+            <FormLabel style={{ paddingTop: "0.4rem" }}>Mentor Name</FormLabel>
             <Input
               type="tel"
               name="companyName"
               value={newMeeting.companyName}
               onChange={handleInputChange}
-              placeholder="Company Name"
+              placeholder="Mentor Name"
             />
-            <FormLabel style={{ paddingTop: "0.4rem" }}>Disability</FormLabel>
+            <FormLabel style={{ paddingTop: "0.4rem" }}>Speciality</FormLabel>
             <Input
               type="tel"
               name="disability"
               value={newMeeting.disability}
               onChange={handleInputChange}
-              placeholder="Disability"
+              placeholder="Speciality"
             />
             <FormLabel style={{ paddingTop: "0.4rem" }}>Experience</FormLabel>
             <Input
@@ -799,13 +810,13 @@ const VirtualAssistant = () => {
               onChange={handleInputChange}
               placeholder="Role"
             />
-            <FormLabel style={{ paddingTop: "0.4rem" }}>Salary</FormLabel>
+            <FormLabel style={{ paddingTop: "0.4rem" }}>Company Name</FormLabel>
             <Input
               type="tel"
               name="salary"
               value={newMeeting.salary}
               onChange={handleInputChange}
-              placeholder="Salary"
+              placeholder="Company Name"
             />
           </ModalBody>
           <ModalFooter>

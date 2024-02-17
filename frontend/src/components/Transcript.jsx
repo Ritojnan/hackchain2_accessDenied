@@ -11,7 +11,7 @@ const YoutubeSearch = ({ title }) => {
   const handleSearch = async () => {
     try {
       const response = await axios.get(
-        `https://www.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_YOUTUBE_API_KEY}&q=${title}&videoDuration=medium&videoEmbeddable=true&type=video&maxResults=5`
+        `https://www.googleapis.com/youtube/v3/search?key=AIzaSyBrdsClFkrQokGYbdXCVSbUTtcOanxUFBM&q=${title}&videoDuration=medium&videoEmbeddable=true&type=video&maxResults=5`
       );
 
       setVideos(response.data.items);
@@ -35,7 +35,7 @@ const YoutubeSearch = ({ title }) => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.REACT_APP_EDENV_API_KEY}`,
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTZhZjY3NzUtNDM0ZC00YzhiLWE5OTMtMzg0YjdhODgyOGYxIiwidHlwZSI6ImFwaV90b2tlbiJ9.-5jwvonLSSasi9EnAzxU-pezBuKFXqBX5Ikbz6Ybo3Q`,
           },
           body: JSON.stringify({
             providers: "google",
@@ -68,7 +68,7 @@ const YoutubeSearch = ({ title }) => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.REACT_APP_EDENV_API_KEY}`,
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTZhZjY3NzUtNDM0ZC00YzhiLWE5OTMtMzg0YjdhODgyOGYxIiwidHlwZSI6ImFwaV90b2tlbiJ9.-5jwvonLSSasi9EnAzxU-pezBuKFXqBX5Ikbz6Ybo3Q `,
           },
           body: JSON.stringify({
             providers: "openai",
