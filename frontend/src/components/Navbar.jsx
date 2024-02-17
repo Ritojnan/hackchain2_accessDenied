@@ -232,7 +232,7 @@ const MobileNav = () => {
         <MobileNavItem key={ind} {...navItem} />
       ))} */}
       {NAV_ITEMS.map((navItem, ind) => {
-        if (navItem.label == "Employers" && user?.role == "Employee") {
+        if (navItem.label == "Mentors" && user?.role == "Employee") {
           console.log("hello");
           return null; // Hide "Employers" for users with role "Employee"
         } else {
@@ -299,7 +299,7 @@ const MobileNavItem = ({ label, children, to }) => {
 
 const NAV_ITEMS = [
   {
-    label: "Employers",
+    label: "Mentors",
     to: "/virtualassistant",
   },
   {

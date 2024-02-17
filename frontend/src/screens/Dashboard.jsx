@@ -3,6 +3,7 @@ import { auth } from "../Firebase";
 import axios from "axios";
 import { FaRegCalendarCheck, FaRegStar, FaTable } from "react-icons/fa";
 import { getFirestore, doc, getDocs, collection } from "firebase/firestore";
+import video from "../assests/video.mp4"
 import {
   Card,
   CardHeader,
@@ -203,7 +204,10 @@ const Dashboard = () => {
   const [Role, setRole] = useState("-");
   const [WorkExperience, setWorkExperience] = useState("-");
   const [selectedValues, setSelectedValues] = useState([]);
-
+  const [selected,setSelected] = useState(false)
+  const takeSession = () => {
+    setSelected(!selected)
+  }
   const addDetails = () => {
     if (!user) {
       alert("Sign in first");
@@ -239,7 +243,7 @@ const Dashboard = () => {
 
   const handleOCRRequest = async () => {
     const apiUrl = "https://api.edenai.run/v2/ocr/identity_parser";
-    const apiKey =process.env.REACT_APP_EDENV_API_KEY // Replace with your actual API key
+    const apiKey ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTZhZjY3NzUtNDM0ZC00YzhiLWE5OTMtMzg0YjdhODgyOGYxIiwidHlwZSI6ImFwaV90b2tlbiJ9.-5jwvonLSSasi9EnAzxU-pezBuKFXqBX5Ikbz6Ybo3Q"// Replace with your actual API key
 
     const form = new FormData();
     form.append("providers", "affinda");
@@ -315,9 +319,50 @@ const Dashboard = () => {
   };
 
   return (
-    <>
+    <div style={{position:"relative"}}>
+      {selected ?
+  <div style={{
+    marginTop:"370px",
+    position: "absolute",
+    display: "flex",
+    width: "97vw",
+    height: "95vh",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: "999",
+    borderRadius: "16px"
+  }}>
+    <div style={{
+      borderRadius: "16px",
+      margin: "auto",
+      width: "80vw",
+      height: "90%",
+      backgroundColor: "white",
+      textAlign: "right",
+      position: "relative",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column",
+      boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)"
+    }}>
+      <span onClick={takeSession} style={{
+        position: "absolute",
+        top: "10px",
+        right: "20px",
+        color: "red",
+        fontWeight: "bold",
+        fontSize: "2vw",
+        cursor: "pointer"
+      }}> X </span>
+      <video autoPlay loop style={{ width: "80%", maxHeight: "80%" , borderRadius: "10px"}} src={video}/>
+    </div>
+  </div>
+  : null}
+
       <div
         style={{
+         
           backgroundColor: "#f3f4f6",
           padding: "2rem",
           textAlign: "left",
@@ -343,7 +388,7 @@ const Dashboard = () => {
           >
             Good morning, {user ? user.name : "User"}
           </div>
-          <div style={{ position: "relative", display: "inline-block" }}>
+          <div style={{  display: "inline-block" }}>
             <div onClick={handleIconClick}>
               <IoNotificationsCircleOutline size="2.45rem" color="#2234da" />
               {notificationDetails?.length >= 0 && (
@@ -511,7 +556,7 @@ const Dashboard = () => {
                 }}
               >
                 <div>
-                  Gender:{" "}
+                  Interests:{" "}
                   <a style={{ color: "black", fontWeight: 600 }}>
                     {user ? user.gender : "-"}
                   </a>
@@ -537,7 +582,7 @@ const Dashboard = () => {
                 color: "gray",
               }}
             >
-              <div>Health Information</div>
+              <div>Personal Information</div>
               <div
                 style={{
                   display: "flex",
@@ -547,7 +592,7 @@ const Dashboard = () => {
                 }}
               >
                 <div>
-                  Blood group:{" "}
+                  Skills: {" "}
                   <a style={{ color: "black", fontWeight: 600 }}>
                     {user ? user.BloodGrp : "-"}
                   </a>
@@ -599,7 +644,7 @@ const Dashboard = () => {
                 color: "gray",
               }}
             >
-              <div>Disability info</div>
+              <div>Disability info (If Any)</div>
               <div
                 style={{
                   display: "flex",
@@ -648,7 +693,7 @@ const Dashboard = () => {
                 color: "gray",
               }}
             >
-              <div>Job</div>
+              <div>Description</div>
               <div
                 style={{
                   display: "flex",
@@ -658,15 +703,15 @@ const Dashboard = () => {
                 }}
               >
                 <div>
-                  Role:{" "}
+                  Career Goal:{" "}
                   <a style={{ color: "black", fontWeight: 600 }}>
                     {user ? user.Role : "-"}
                   </a>
                 </div>
                 <div>
-                  Work experience:{" "}
+                  Preference:{" "}
                   <a style={{ color: "black", fontWeight: 600 }}>
-                    {user ? user.WorkExperience + " years" : "-"}
+                    {user ? user.WorkExperience + " " : "-"}
                   </a>
                 </div>
                 <div>
@@ -934,7 +979,7 @@ const Dashboard = () => {
                         gap: "0.5rem",
                       }}
                     >
-                      <div>₹{job.Salary}</div>
+                      <div>{job.Salary}</div>
                       <div
                         style={{
                           display: "flex",
@@ -946,6 +991,25 @@ const Dashboard = () => {
                         <FaRegStar />
                         {job.Rating}
                       </div>
+                    </div>
+                   
+                    <div onClick={takeSession} style={{ color: "gray" }}>
+                      <button
+                        style={{
+                          color: "#ff5045",
+                          cursor: "pointer",
+                          fontWeight: 700,
+                          border: "1px solid lightgray",
+                          borderRadius: "0.5rem",
+                          paddingLeft: "0.5rem",
+                          paddingRight: "0.5rem",
+                          fontSize: "0.8rem",
+                          marginRight: "0.5rem",
+                        }}
+                      >
+                        Take Session
+                      </button>
+                      {/* {time(job.Posted)} */}
                     </div>
                     <div onClick={addApplicant} style={{ color: "gray" }}>
                       <button
@@ -981,31 +1045,31 @@ const Dashboard = () => {
           <ModalHeader>Edit profile</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <FormLabel>Gender</FormLabel>
+            <FormLabel>Interests</FormLabel>
             <Input
               onChange={(e) => setGender(e.target.value)}
               type="tel"
-              placeholder="Enter gender"
+              placeholder="What are your interests"
             />
-            <FormLabel style={{ paddingTop: "0.4rem" }}>Blood group</FormLabel>
+            <FormLabel style={{ paddingTop: "0.4rem" }}>Skills</FormLabel>
             <Input
               onChange={(e) => setBloodGrp(e.target.value)}
               type="tel"
-              placeholder="Enter blood group"
+              placeholder="Enter your skills"
             />
-            <FormLabel style={{ paddingTop: "0.4rem" }}>Role</FormLabel>
+            <FormLabel style={{ paddingTop: "0.4rem" }}>Career Goal</FormLabel>
             <Input
               onChange={(e) => setRole(e.target.value)}
               type="tel"
-              placeholder="Enter role"
+              placeholder="What is your career objective"
             />
             <FormLabel style={{ paddingTop: "0.4rem" }}>
-              Work experience
+              Mentor Preference
             </FormLabel>
             <Input
               onChange={(e) => setWorkExperience(e.target.value)}
               type="tel"
-              placeholder="Enter work experience in years"
+              placeholder="What type of mentor would you prefer?"
             />
           </ModalBody>
           <ModalFooter>
@@ -1022,7 +1086,7 @@ const Dashboard = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </div>
   );
 };
 
