@@ -70,7 +70,7 @@ const DataTable = () => {
   const isSelected = (index) => selected.indexOf(index) !== -1;
 
   return (
-    <TableContainer component={Paper} colorScheme='teal'>
+    <TableContainer component={Paper} colorScheme='green'>
       <Table>
         <TableHead>
           <TableRow>

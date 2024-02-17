@@ -90,7 +90,7 @@ const FilterBox = ({ filterFunction }) => {
       <Box display={{ base: "inline", md: "none" }}>
         <Button
           leftIcon={<Icon as={FaFilter} />}
-          colorScheme="teal"
+          colorScheme="green"
           variant="solid"
           width="full"
           onClick={onOpen}
@@ -113,7 +113,7 @@ const FilterBox = ({ filterFunction }) => {
             <strong>Locations:</strong>
           </Box>
           {locations.map((location) => (
-            <Badge key={location} variant="outline" colorScheme="teal" mr={2}>
+            <Badge key={location} variant="outline" colorScheme="green" mr={2}>
               {location}
             </Badge>
           ))}
@@ -144,7 +144,7 @@ const FilterBox = ({ filterFunction }) => {
         <Box mb={2}>
           <strong>Salary Range:</strong>
           <Slider
-            colorScheme="teal"
+            colorScheme="green"
             min={0}
             max={1000000}
             step={10000}
@@ -164,7 +164,7 @@ const FilterBox = ({ filterFunction }) => {
         </Box>
 
         <Button
-          colorScheme="teal"
+          colorScheme="green"
           onClick={handleFilterChange}
           mb={2}
           width="full"
@@ -303,7 +303,7 @@ const JobList = ({ jobs }) => {
             </Button>
             <Button
               variant={"outline"}
-              colorScheme={"teal"}
+              colorScheme={"green"}
               bordersize={"lg"}
               m={2}
               onClick={onOpen}
@@ -328,7 +328,7 @@ const JobList = ({ jobs }) => {
                     CLose
                   </Button>
                   <Button
-                    colorScheme="teal"
+                    colorScheme="green"
                     width={"full"}
                     mr={3}
                     onClick={onClose}
@@ -476,7 +476,7 @@ const JobBoard = () => {
             onChange={(e) => setQuery(e.target.value)}
             mb={4}
           />
-          <Button colorScheme="teal" onClick={()=>{    fetchData(query)}}>
+          <Button colorScheme="green" onClick={()=>{    fetchData(query)}}>
             Fetch Data
           </Button>
         </Box>

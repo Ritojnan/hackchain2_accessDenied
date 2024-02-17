@@ -19,11 +19,11 @@ const ReadAloud = ({ value, handleChangeInput }) => {
   const { browserSupportsSpeechRecognition } = useSpeechRecognition();
 
   return (
-    <Box color={value ? "red.800" : "teal.800"} aria-label="Read Aloud">
+    <Box color={value ? "red.800" : "green.800"} aria-label="Read Aloud">
       <IconButton
         icon={value ? <HiSpeakerXMark /> : <HiSpeakerWave />}
         aria-label="Read Aloud"
-        colorScheme={value ? "red" : "teal"}
+        colorScheme={value ? "red" : "green"}
         onClick={() => {
           try {
             const initialSpeech = value
