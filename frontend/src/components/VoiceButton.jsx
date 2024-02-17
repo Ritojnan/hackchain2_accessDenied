@@ -41,7 +41,7 @@ const LanguageButtons = () => {
         <Button
           key={language.code}
           width="full"
-          colorScheme="teal"
+          colorScheme="green"
           size={"lg"}
           onFocus={() =>
             SpeechRecognition.startListening({ language: language.code })
@@ -186,7 +186,7 @@ const VoiceButton = () => {
     setStatus("Your browser does not support speech recognition.");
   }
   return (
-    <Box color={"teal.800"} aria-label="Voice Assistant">
+    <Box color={"green.800"} aria-label="Voice Assistant">
       <IconButton
         width="full"
         icon={<FaMicrophone />}
@@ -200,7 +200,7 @@ const VoiceButton = () => {
           startListening();
         }}
         size="lg"
-        colorScheme="teal"
+        colorScheme="green"
         aria-labelledby="voice-assistant"
       />
 

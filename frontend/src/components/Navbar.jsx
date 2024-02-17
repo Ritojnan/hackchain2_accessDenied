@@ -39,7 +39,7 @@ function WithSubnavigation() {
     >
       <Flex
         bg={useColorModeValue("white", "gray.800")}
-        color="teal.800" // Change text color to teal.800
+        color="green.800" // Change text color to green.800
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
@@ -115,11 +115,8 @@ function WithSubnavigation() {
             fontSize={"sm"}
             fontWeight={600}
             color="white"
-            bg="#2234da"
             to={"/signup"}
-            _hover={{
-              bg: "blue",
-            }}
+            colorScheme="green"
           >
             Sign Up
           </Button>
@@ -189,7 +186,7 @@ const DesktopSubNav = ({ label, to, subLabel }) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("teal.50", "gray.900") }}
+      _hover={{ bg: useColorModeValue("green.50", "gray.900") }}
     >
       <Stack
         direction={"row"}
@@ -199,7 +196,7 @@ const DesktopSubNav = ({ label, to, subLabel }) => {
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "teal.400" }}
+            _groupHover={{ color: "green.400" }}
             fontWeight={500}
           >
             {label}
@@ -215,7 +212,7 @@ const DesktopSubNav = ({ label, to, subLabel }) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"teal.400"} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={"green.400"} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Box>

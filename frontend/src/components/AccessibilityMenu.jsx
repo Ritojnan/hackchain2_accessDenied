@@ -162,13 +162,13 @@ const AccessibilityMenu = (props) => {
   }, []); // Empty dependency array ensures the effect runs only once during mount and unmount
 
   return (
-    <Box color={useColorModeValue("gray.800", "whiteAlpha.900")}>
+    <Box color={useColorModeValue("gray.800", "whigreenpha.900")}>
       <IconButton
         icon={<FaAccessibleIcon />}
         aria-label="Voice Button"
         onClick={onToggle}
         size="lg"
-        colorScheme="teal"
+        colorScheme="green"
         aria-labelledby="voice-assistant"
       />
 
@@ -189,7 +189,7 @@ const AccessibilityMenu = (props) => {
               <Button
                 as={Link}
                 width={"full"}
-                colorScheme="teal"
+                colorScheme="green"
                 to={"/help"}
                 borderRadius={"xl"}
                 size={"lg"}

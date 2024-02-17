@@ -19,6 +19,7 @@ import { FaDollarSign } from "react-icons/fa";
 import { HiOutlineReceiptTax } from "react-icons/hi";
 import { GoLaw } from "react-icons/go";
 import Testimonials from "../screens/Testimonials";
+import Description from "../components/Description"
 export default function LandingTop() {
   const [click1, Setclick1] = useState(false);
   const [click2, Setclick2] = useState(false);
@@ -78,32 +79,6 @@ export default function LandingTop() {
           style={{ fontSize: "2vh", color: "#b3b0ca", fontFamily: "poppins" }}
         >
           *Request will be Queued
-        </div>
-      </div>
-      <div className="company">
-        <p className="p2">
-          Helped People to get into{" "}
-          <span style={{ color: "#2234da" }}> 100 + </span>Great Companies
-          Worldwide
-        </p>
-        <div className="block-companies">
-          <div className="comapanies">Lyra</div>{" "}
-          <span className="slash" style={{ color: "#2234da" }}>
-            |
-          </span>
-          <div className="comapanies">CM Securities</div>
-          <span className="slash" style={{ color: "#2234da" }}>
-            |
-          </span>
-          <div className="comapanies">Balaji Tanks & Vessels</div>
-          <span className="slash" style={{ color: "#2234da" }}>
-            |
-          </span>
-          <div className="comapanies">SBI</div>
-          <span className="slash" style={{ color: "#2234da" }}>
-            |
-          </span>
-          <div className="comapanies">Status Airvision</div>
         </div>
       </div>
       <div className="section1" style={{ position: "relative" }}>
@@ -220,43 +195,7 @@ export default function LandingTop() {
           style={{ position: "absolute", opacity: "20%" }}
         />
 
-        <div className="description" id="d1">
-          <div className="description-title">
-            Simplify Your <br />
-            Job Search with <br />
-            Advanced Filters
-            <div className="subheading" id="description-heading">
-              Find your ideal job effortlessly using our advanced filters.
-              Customize your search based on your preferences, skills, and
-              accessibility requirements.
-            </div>
-          </div>
-          <img className="image1" src={invoice} alt="" />
-        </div>
-        <div className="description" id="d2">
-          <img className="image1" src={management} alt="" />
-          <div className="description-title">
-            Accessible Work <br />places 
-            For Everyone
-            <div className="subheading" id="description-heading">
-              Explore job opportunities in companies committed to creating
-              accessible and inclusive workplaces for individuals with
-              disabilities. Your career journey starts with us!
-            </div>
-          </div>
-        </div>
-        <div className="description" id="d3">
-          <div className="description-title">
-            Personalized Career <br />
-            Guidance and Support
-            <div className="subheading" id="description-heading">
-              Receive personalized career guidance and support from experts who
-              understand the unique challenges and strengths of disabled
-              professionals. We're here to empower your career growth.
-            </div>
-          </div>
-          <img id="image3" src={accounting} alt="" />
-        </div>
+<Description/>
       </div>
       <Testimonials />
       <div
