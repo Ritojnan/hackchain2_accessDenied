@@ -203,7 +203,10 @@ const Dashboard = () => {
   const [Role, setRole] = useState("-");
   const [WorkExperience, setWorkExperience] = useState("-");
   const [selectedValues, setSelectedValues] = useState([]);
-
+  const [selected,setSelected] = useState(false)
+  const takeSession = () => {
+    setSelected(!selected)
+  }
   const addDetails = () => {
     if (!user) {
       alert("Sign in first");
@@ -315,9 +318,50 @@ const Dashboard = () => {
   };
 
   return (
-    <>
+    <div style={{position:"relative"}}>
+      {selected ?
+  <div style={{
+    marginTop:"370px",
+    position: "absolute",
+    display: "flex",
+    width: "97vw",
+    height: "100vh",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: "999",
+    borderRadius: "16px"
+  }}>
+    <div style={{
+      borderRadius: "16px",
+      margin: "auto",
+      width: "80vw",
+      height: "100%",
+      backgroundColor: "white",
+      textAlign: "right",
+      position: "relative",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column",
+      boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)"
+    }}>
+      <span onClick={takeSession} style={{
+        position: "absolute",
+        top: "10px",
+        right: "10px",
+        color: "red",
+        fontWeight: "bold",
+        fontSize: "2vw",
+        cursor: "pointer"
+      }}> X </span>
+      <video autoPlay muted loop style={{ width: "80%", maxHeight: "80%" }} />
+    </div>
+  </div>
+  : null}
+
       <div
         style={{
+         
           backgroundColor: "#f3f4f6",
           padding: "2rem",
           textAlign: "left",
@@ -343,7 +387,7 @@ const Dashboard = () => {
           >
             Good morning, {user ? user.name : "User"}
           </div>
-          <div style={{ position: "relative", display: "inline-block" }}>
+          <div style={{  display: "inline-block" }}>
             <div onClick={handleIconClick}>
               <IoNotificationsCircleOutline size="2.45rem" color="#2234da" />
               {notificationDetails?.length >= 0 && (
@@ -947,6 +991,25 @@ const Dashboard = () => {
                         {job.Rating}
                       </div>
                     </div>
+                   
+                    <div onClick={takeSession} style={{ color: "gray" }}>
+                      <button
+                        style={{
+                          color: "#ff5045",
+                          cursor: "pointer",
+                          fontWeight: 700,
+                          border: "1px solid lightgray",
+                          borderRadius: "0.5rem",
+                          paddingLeft: "0.5rem",
+                          paddingRight: "0.5rem",
+                          fontSize: "0.8rem",
+                          marginRight: "0.5rem",
+                        }}
+                      >
+                        Take Session
+                      </button>
+                      {/* {time(job.Posted)} */}
+                    </div>
                     <div onClick={addApplicant} style={{ color: "gray" }}>
                       <button
                         style={{
@@ -1022,7 +1085,7 @@ const Dashboard = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </div>
   );
 };
 
