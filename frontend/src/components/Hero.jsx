@@ -42,7 +42,7 @@ export default function WithBackgroundImage() {
             fontWeight='extrabold'          
             fontSize={useBreakpointValue({ base: "7xl", md: "9xl" })}
           >
-                        Mentos
+                        Mentorify
           </Text>
           <HStack justify={'center'} >
             <Button rounded={"full"} color={"white"} colorScheme="green">

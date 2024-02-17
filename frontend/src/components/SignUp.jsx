@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import loader from "../assests/loader.gif";
+import loader from "../assests/ill5.jpeg";
 import {
   Box,
   Center,
@@ -77,10 +77,9 @@ const Signup = () => {
         >
           <Center
             h="100%"
+            bgGradient='linear(to-r, green.200, green.500)'
             style={{
               flex: 1,
-              background:
-                "linear-gradient(90deg, hsla(192, 95%, 50%, 1) 0%, hsla(225, 89%, 47%, 1) 100%)",
               borderEndEndRadius: "250px",
             }}
           >
@@ -162,16 +161,10 @@ const Signup = () => {
                   </Select>
                 </FormControl>
                 <Button
-                  bgColor="#3261ff"
-                  color="white"
                   type="submit"
                   isLoading={isLoading}
                   width={"full"}
-                  style={{
-                    fontSize: "0.7rem",
-                    height: "fit-content",
-                    padding: "0.5rem",
-                  }}
+                  colorScheme="green"
                 >
                   Sign Up
                 </Button>
@@ -182,12 +175,6 @@ const Signup = () => {
                   color={"white"}
                   leftIcon={<FaGoogle />}
                   width={"full"}
-                  style={{
-                    fontSize: "0.7rem",
-                    height: "fit-content",
-                    padding: "0.5rem",
-                    marginTop: "-0.4rem",
-                  }}
                 >
                   Sign Up with Google
                 </Button>
@@ -217,15 +204,17 @@ const Signup = () => {
             </Flex>
           </Center>
           <div className="left" style={{ flex: 0.6 }}>
-            <h1
-              style={{
-                color: "#e38a43",
-                fontSize: "5.5rem",
-                fontWeight: "bolder",
-              }}
+            <Text
+              color={"white"}
+              lineHeight={1.2}
+              align={"center"}
+              bgGradient="linear(to-l, green, orange,green)"
+              bgClip="text"
+              fontWeight="extrabold"
+              fontSize={{ base: "4xl", md: "5xl" }}
             >
-              सह<span style={{ color: "#3261ff" }}>AI</span>ता
-            </h1>
+              Mentorify
+            </Text>
             <img
               src={loader}
               alt=""
@@ -254,9 +243,9 @@ const Signup = () => {
           </div> */}
         </Box>
       ) : (
-        <div
+        <Box
           style={{
-            backgroundColor: "#f3f4f6",
+            backgroundColor: "orange",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -315,7 +304,7 @@ const Signup = () => {
                 }}
                 style={{
                   fontWeight: 555,
-                  backgroundColor: "#2234da",
+                  backgroundColor: "red",
                   paddingTop: "0.3rem",
                   paddingBottom: "0.3rem",
                   paddingLeft: "1.6rem",
@@ -328,7 +317,7 @@ const Signup = () => {
               </button>
             </div>
           </div>
-        </div>
+        </Box>
       )}
     </>
   );

@@ -64,23 +64,30 @@ function WithSubnavigation() {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Link to={"/"}>
-            {/* <Text
-              textAlign={useBreakpointValue({ base: "center", md: "left" })}
-              fontFamily={"heading"}
-              fontWeight={"bold"}
-              ml={[0, 12]}
-            >
-              Mentos
-            </Text> */}
-            <span
-              style={{
-                color: "#e38a43",
-                fontWeight: "bolder",
-                fontSize: "40px",
-              }}
-            >
-              सह<span style={{ color: "#3261ff" }}>AI</span>ता
-            </span>
+            
+
+
+
+            <Box>
+          <Popover trigger={"hover"} placement={"bottom-start"}>
+            <PopoverTrigger>
+              <Box
+                as={Link}
+                p={2}
+                to={"/"}
+                fontSize={"xl"}
+                bgGradient='linear(to-l, green.400, yellow.300,green.400)'
+                bgClip='text'
+                fontWeight='extrabold'          
+    
+              >
+                Mentorify
+              </Box>
+            </PopoverTrigger>
+          </Popover>
+        </Box>
+
+
           </Link>
           <Spacer />
           <Flex
@@ -130,7 +137,7 @@ function WithSubnavigation() {
 }
 const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("#2234da", "white");
+  const linkHoverColor = useColorModeValue("green", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (

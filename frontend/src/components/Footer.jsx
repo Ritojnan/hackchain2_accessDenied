@@ -53,7 +53,7 @@ export default function LargeWithLogoLeft() {
         >
           <Stack spacing={3}>
             <Box>
-              <Text fontWeight="bold">Mentos</Text>
+              <Text fontWeight="bold">Mentorify</Text>
               {/* <Logo color={useColorModeValue('gray.700', 'white')} /> */}
             </Box>
             <Text fontSize={"sm"}>© 2024 All rights reserved</Text>
