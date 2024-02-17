@@ -222,239 +222,232 @@ export default function LandingTop() {
 
         <div className="description" id="d1">
           <div className="description-title">
-            Simplify Your <br />
-            Job Search with <br />
-            Advanced Filters
+          Interactive Mentor-Matching
             <div className="subheading" id="description-heading">
-              Find your ideal job effortlessly using our advanced filters.
-              Customize your search based on your preferences, skills, and
-              accessibility requirements.
-            </div>
+            Experience a revolutionary mentorship platform powered by an intelligent algorithm that analyzes your interests, career goals, and skills to match you with the perfect mentor. Say goodbye to endless searching and hello to instant connections tailored to your unique needs.
+</div>
           </div>
           <img className="image1" src={invoice} alt="" />
         </div>
         <div className="description" id="d2">
           <img className="image1" src={management} alt="" />
           <div className="description-title">
-            Accessible Work <br />places 
-            For Everyone
+          Real-Time Progress Tracking Tools
+
             <div className="subheading" id="description-heading">
-              Explore job opportunities in companies committed to creating
-              accessible and inclusive workplaces for individuals with
-              disabilities. Your career journey starts with us!
-            </div>
+            Stay on top of your mentorship journey with our cutting-edge progress tracking features. Monitor your achievements, set goals, and celebrate milestones in real-time. With intuitive dashboards and actionable insights, you'll always know where you stand and how far you've come.
+
+</div>
           </div>
         </div>
         <div className="description" id="d3">
           <div className="description-title">
-            Personalized Career <br />
-            Guidance and Support
+          Virtual Mentor-Guided Learning Module
             <div className="subheading" id="description-heading">
-              Receive personalized career guidance and support from experts who
-              understand the unique challenges and strengths of disabled
-              professionals. We're here to empower your career growth.
-            </div>
+            Elevate your skills and knowledge with our immersive mentor-guided learning modules. Gain access to curated resources, practical advice, and interactive exercises designed to accelerate your growth. From industry insights to hands-on projects, our virtual learning experience puts you in the driver's seat of your education.
+</div>
           </div>
           <img id="image3" src={accounting} alt="" />
         </div>
       </div>
       <Testimonials />
       <div
-        className="section1"
-        id="s2"
+  className="section1"
+  id="s2"
+  style={{
+    marginTop: "0",
+    display: "flex",
+    alignItems: "center",
+    position: "relative",
+    overflow: "hidden",
+  }}
+>
+  <div className="section-title">Frequently Asked Questions!</div>
+  <img
+    src={arrow}
+    alt=""
+    className="four"
+    style={{
+      position: "absolute",
+      top: "30px",
+      right: "-70px",
+      opacity: "25%",
+    }}
+  />
+  <img
+    src={vector2}
+    alt=""
+    className="four"
+    style={{
+      position: "absolute",
+      bottom: "30px",
+      left: "100px",
+      opacity: "25%",
+    }}
+  />
+
+  {/* FAQ 1 */}
+  <div
+    className="questions"
+    style={{ color: click1 ? "white" : "#b6d6fc" }}
+  >
+    <h5
+      onClick={() => {
+        Setclick1(!click1);
+      }}
+    >
+      What specialized services do you offer for job seekers with disabilities?
+      <span style={{ fontWeight: "bolder", fontSize: "4.5vh" }}>
+        {click1 ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
+      </span>
+    </h5>
+    <p
+      style={{
+        opacity: click1 ? 0 : 1,
+        height: click1 ? 0 : "auto",
+        overflow: "hidden",
+        fontFamily: "poppins",
+        color: "#82888d",
+        transition: "opacity 0.3s ease-in-out, height 0.3s ease-in-out",
+      }}
+    >
+      We understand the unique needs of job seekers with disabilities and
+      provide specialized services. Our platform offers advanced filters to help
+      you find jobs that match your accessibility requirements. Additionally,
+      we collaborate with inclusive employers to create accessible workplaces
+      for everyone.
+    </p>
+  </div>
+  <span className="dots" style={{ color: "#82888d" }}>
+    ....................................................................................................................................................
+  </span>
+
+  {/* FAQ 2 */}
+  <div
+    className="questions"
+    style={{ color: click2 ? "white" : "#b6d6fc" }}
+  >
+    <h5
+      onClick={() => {
+        Setclick2(!click2);
+      }}
+    >
+      How can my organization benefit from using your job portal for disabled
+      employees?
+      <span
         style={{
-          marginTop: "0",
-          display: "flex",
-          alignItems: "center",
-          position: "relative",
-          overflow: "hidden",
+          fontWeight: "bolder",
+          fontSize: "4.5vh",
+          marginLeft: "2vw",
         }}
       >
-        <div className="section-title">Frequently Asked Questions !</div>
-        <img
-          src={arrow}
-          alt=""
-          className="four"
-          style={{
-            position: "absolute",
-            top: "30px",
-            right: "-70px",
-            opacity: "25%",
-          }}
-        />
-        <img
-          src={vector2}
-          alt=""
-          className="four"
-          style={{
-            position: "absolute",
-            bottom: "30px",
-            left: "100px",
-            opacity: "25%",
-          }}
-        />
+        {click2 ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
+      </span>
+    </h5>
+    <p
+      style={{
+        opacity: click2 ? 0 : 1,
+        height: click2 ? 0 : "auto",
+        overflow: "hidden",
+        fontFamily: "poppins",
+        color: "#82888d",
+        transition: "opacity 0.3s ease-in-out, height 0.3s ease-in-out",
+      }}
+    >
+      Using our job portal for disabled employees can facilitate inclusive
+      hiring practices, ensuring that your organization benefits from a diverse
+      and talented workforce. Our platform is designed to streamline the
+      recruitment process, making it more accessible and accommodating for both
+      employers and job seekers with disabilities.
+    </p>
+  </div>
+  <span className="dots" style={{ color: "#82888d" }}>
+    ....................................................................................................................................................
+  </span>
 
-        <div
-          className="questions"
-          style={{ color: click1 ? "white" : "#b6d6fc" }}
-        >
-          <h5
-            onClick={() => {
-              Setclick1(!click1);
-            }}
-          >
-            {" "}
-            What specialized services do you offer for job seekers with
-            disabilities?{" "}
-            <span style={{ fontWeight: "bolder", fontSize: "4.5vh" }}>
-              {click1 ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
-            </span>
-          </h5>
-          <p
-            style={{
-              opacity: click1 ? 0 : 1,
-              height: click1 ? 0 : "auto",
-              overflow: "hidden",
-              fontFamily: "poppins",
-              color: "#82888d",
-              transition: "opacity 0.3s ease-in-out, height 0.3s ease-in-out",
-            }}
-          >
-            We understand the unique needs of job seekers with disabilities and
-            provide specialized services. Our platform offers advanced filters
-            to help you find jobs that match your accessibility requirements.
-            Additionally, we collaborate with inclusive employers to create
-            accessible workplaces for everyone.
-          </p>
-        </div>
-        <span className="dots" style={{ color: "#82888d" }}>
-          ....................................................................................................................................................
-        </span>
-        <div
-          className="questions"
-          style={{ color: click2 ? "white" : "#b6d6fc" }}
-        >
-          <h5
-            onClick={() => {
-              Setclick2(!click2);
-            }}
-          >
-            {" "}
-            How can my organization benefit from using your job portal for
-            disabled employees?{" "}
-            <span
-              style={{
-                fontWeight: "bolder",
-                fontSize: "4.5vh",
-                marginLeft: "2vw",
-              }}
-            >
-              {click2 ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
-            </span>
-          </h5>
-          <p
-            style={{
-              opacity: click2 ? 0 : 1,
-              height: click2 ? 0 : "auto",
-              overflow: "hidden",
-              fontFamily: "poppins",
-              color: "#82888d",
-              transition: "opacity 0.3s ease-in-out, height 0.3s ease-in-out",
-            }}
-          >
-            Using our job portal for disabled employees can facilitate inclusive
-            hiring practices, ensuring that your organization benefits from a
-            diverse and talented workforce. Our platform is designed to
-            streamline the recruitment process, making it more accessible and
-            accommodating for both employers and job seekers with disabilities.
-          </p>
-        </div>
-        <span className="dots" style={{ color: "#82888d" }}>
-          ....................................................................................................................................................
-        </span>
+  {/* FAQ 3 */}
+  <div
+    className="questions"
+    style={{ color: click3 ? "white" : "#b6d6fc" }}
+  >
+    <h5
+      onClick={() => {
+        Setclick3(!click3);
+      }}
+    >
+      In which industries does your job portal specialize?
+      <span
+        style={{
+          fontWeight: "bolder",
+          fontSize: "4.5vh",
+          marginLeft: "2vw",
+        }}
+      >
+        {click3 ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
+      </span>
+    </h5>
+    <p
+      style={{
+        opacity: click3 ? 0 : 1,
+        height: click3 ? 0 : "auto",
+        overflow: "hidden",
+        color: "#82888d",
+        fontFamily: "poppins",
+        transition: "opacity 0.3s ease-in-out, height 0.3s ease-in-out",
+      }}
+    >
+      Our job portal specializes in catering to disabled job seekers across
+      various industries, ensuring that opportunities are available in sectors
+      such as IT, healthcare, retail, and services. We are committed to
+      supporting inclusivity in the workplace for individuals with diverse
+      abilities.
+    </p>
+  </div>
+  <span className="dots" style={{ color: "#82888d" }}>
+    ....................................................................................................................................................
+  </span>
 
-        <div
-          className="questions"
-          style={{ color: click3 ? "white" : "#b6d6fc" }}
-        >
-          <h5
-            onClick={() => {
-              Setclick3(!click3);
-            }}
-          >
-            {" "}
-            In which industries does your job portal specialize?{" "}
-            <span
-              style={{
-                fontWeight: "bolder",
-                fontSize: "4.5vh",
-                marginLeft: "2vw",
-              }}
-            >
-              {click3 ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
-            </span>
-          </h5>
-          <p
-            style={{
-              opacity: click3 ? 0 : 1,
-              height: click3 ? 0 : "auto",
-              overflow: "hidden",
-              color: "#82888d",
-              fontFamily: "poppins",
-              transition: "opacity 0.3s ease-in-out, height 0.3s ease-in-out",
-            }}
-          >
-            Our job portal specializes in catering to disabled job seekers
-            across various industries, ensuring that opportunities are available
-            in sectors such as IT, healthcare, retail, and services. We are
-            committed to supporting inclusivity in the workplace for individuals
-            with diverse abilities.
-          </p>
-        </div>
-        <span className="dots" style={{ color: "#82888d" }}>
-          ....................................................................................................................................................
-        </span>
+  {/* FAQ 4 */}
+  <div
+    className="questions"
+    style={{ color: click4 ? "white" : "#b6d6fc" }}
+  >
+    <h5
+      onClick={() => {
+        Setclick4(!click4);
+      }}
+    >
+      How can organizations get started with your disabled employees' job
+      portal?
+      <span
+        style={{
+          fontWeight: "bolder",
+          fontSize: "4.5vh",
+          marginLeft: "2vw",
+        }}
+      >
+        {click4 ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
+      </span>
+    </h5>
+    <p
+      style={{
+        opacity: click4 ? 0 : 1,
+        height: click4 ? 0 : "auto",
+        color: "#82888d",
+        overflow: "hidden",
+        fontFamily: "poppins",
+        transition: "opacity 0.3s ease-in-out, height 0.3s ease-in-out",
+      }}
+    >
+      Getting started is easy! Organizations can reach out to our team through
+      the contact details provided on our portal. We will guide you through the
+      onboarding process, helping you tailor your job listings and recruitment
+      strategies to create an inclusive and accessible hiring environment for
+      disabled individuals.
+    </p>
+  </div>
+</div>
 
-        <div
-          className="questions"
-          style={{ color: click4 ? "white" : "#b6d6fc" }}
-        >
-          <h5
-            onClick={() => {
-              Setclick4(!click4);
-            }}
-          >
-            {" "}
-            How can organizations get started with your disabled employees' job
-            portal?{" "}
-            <span
-              style={{
-                fontWeight: "bolder",
-                fontSize: "4.5vh",
-                marginLeft: "2vw",
-              }}
-            >
-              {click4 ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
-            </span>
-          </h5>
-          <p
-            style={{
-              opacity: click4 ? 0 : 1,
-              height: click4 ? 0 : "auto",
-              color: "#82888d",
-              overflow: "hidden",
-              fontFamily: "poppins",
-              transition: "opacity 0.3s ease-in-out, height 0.3s ease-in-out",
-            }}
-          >
-            Getting started is easy! Organizations can reach out to our team
-            through the contact details provided on our portal. We will guide
-            you through the onboarding process, helping you tailor your job
-            listings and recruitment strategies to create an inclusive and
-            accessible hiring environment for disabled individuals.
-          </p>
-        </div>
-      </div>
     </>
   );
 }
